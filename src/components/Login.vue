@@ -4,10 +4,12 @@
       <span>LOGIN</span>
       <Form ref="formLogin" :model="formlogin" :rules="formrules">
         <FormItem prop="user">
+          <Icon type="md-person" />用户名:
           <Input type="text" v-model="formlogin.user" placeholder="User"/>
         </FormItem>
         <FormItem prop="pwd">
-          <Input type="password" v-model="formlogin.pwd" placeholder="Password"/>
+          <div><Icon type="md-lock" />密码:
+          <Input type="password" v-model="formlogin.pwd" placeholder="Password"/></div>
         </FormItem>
         <FormItem>
           <Button type="primary" @click="handleSubmit('formLogin')">Signin</Button>
