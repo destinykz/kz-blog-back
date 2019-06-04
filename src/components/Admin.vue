@@ -17,7 +17,7 @@
                 <Icon type="ios-navigate"></Icon>文章管理
               </template>
               <MenuItem name="articleAdd" to="/admin/articleAdd">新增文章</MenuItem>
-              <MenuItem name="articleList" to="/articleList">文章列表</MenuItem>
+              <MenuItem name="articleList" to="/admin/articleList">文章列表</MenuItem>
               <MenuItem name="1-3">草稿箱</MenuItem>
               <MenuItem name="1-4">垃圾箱</MenuItem>
             </Submenu>
@@ -40,14 +40,15 @@
             </Submenu>
           </Menu>
         </Sider>
-        <Layout class="main">
+        <Layout class="main"> 
           <Breadcrumb :style="{margin: '24px 0'}">
             <BreadcrumbItem>Home</BreadcrumbItem>
             <BreadcrumbItem>Components</BreadcrumbItem>
             <BreadcrumbItem>Layout</BreadcrumbItem>
           </Breadcrumb>
-          
+          <transition name="slide">
           <router-view/>
+           </transition>
         </Layout>
       </Layout>
     </Layout>
@@ -92,6 +93,20 @@ export default {
 }
 .main {
   left: 200px;
-  position: relative;
+  position: absolute;
+  right: 0; 
+  padding: 15px;  
+   
+}
+.slide-enter-active,
+.slide-leave-active {
+  transition: 0.3s;
+}
+.slide-enter,
+.slide-leave-to {
+  position: absolute;
+  top: 84px;
+  transform: translateX(100px);
+  opacity: 0;
 }
 </style>
