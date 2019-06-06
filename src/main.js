@@ -10,6 +10,11 @@ import 'iview/dist/styles/iview.css'
 Vue.config.productionTip = false
 Vue.use(iView);
 
+
+// markdown编辑器
+import mavonEditor from 'mavon-editor'
+import 'mavon-editor/dist/css/index.css'
+Vue.use(mavonEditor)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

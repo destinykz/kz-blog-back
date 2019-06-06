@@ -4,9 +4,7 @@
       <Header>
         <Menu mode="horizontal" theme="dark" active-name="1">
           <div class="layout-logo"></div>
-          <div class="layout-nav">
-            
-          </div>
+          <div class="layout-nav"></div>
         </Menu>
       </Header>
       <Layout>
@@ -33,22 +31,22 @@
                 <Icon type="ios-analytics"></Icon>评论列表
               </template>
             </Submenu>
-             <Submenu name="4">
+            <Submenu name="4">
               <template slot="title">
                 <Icon type="ios-analytics"></Icon>留言列表
               </template>
             </Submenu>
           </Menu>
         </Sider>
-        <Layout class="main"> 
+        <Layout class="main">
           <Breadcrumb :style="{margin: '24px 0'}">
             <BreadcrumbItem>Home</BreadcrumbItem>
             <BreadcrumbItem>Components</BreadcrumbItem>
             <BreadcrumbItem>Layout</BreadcrumbItem>
           </Breadcrumb>
           <transition name="slide">
-          <router-view/>
-           </transition>
+            <router-view/>
+          </transition>
         </Layout>
       </Layout>
     </Layout>
@@ -56,9 +54,7 @@
 </template>
 
 <script>
-export default {
-    
-};
+export default {};
 </script>
 
 <style>
@@ -94,9 +90,12 @@ export default {
 .main {
   left: 200px;
   position: absolute;
-  right: 0; 
-  padding: 15px;  
-   
+  right: 0;
+  padding: 15px;
+  bottom: 0;
+  top: 64px;
+  overflow: hidden;
+  overflow-y: auto;
 }
 .slide-enter-active,
 .slide-leave-active {

@@ -1,9 +1,12 @@
 <template>
-     <h1>  arti lsit</h1>
+     <articlebase></articlebase>
 </template>
 <script>
+import articlebase from './articleList.base'
 export default {
-    
+    components:{
+         articlebase
+    }
 }
 </script>
 <style>
